@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Onboarding Buddy System</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              ibm: {
+                blue:   "#0f62fe",
+                dark:   "#001141",
+                light:  "#edf5ff",
+                gray:   "#f4f4f4",
+              },
+              accent: "#ff6b2b",
+            },
+            fontFamily: {
+              sans: ["IBM Plex Sans", "ui-sans-serif", "system-ui", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body class="font-sans bg-white text-gray-800 antialiased">
+
+    <!-- ===== NAVBAR ===== -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur border-b border-gray-100 shadow-sm">
+      <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+        <div class="flex items-center gap-2">
+          <!-- Logo mark -->
+          <div class="w-8 h-8 rounded-lg bg-ibm-blue flex items-center justify-center">
+            <svg class="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" />
+            </svg>
+          </div>
+          <span class="font-bold text-ibm-dark text-lg tracking-tight">Onboarding <span class="text-ibm-blue">Buddy</span></span>
+        </div>
+        <div class="hidden md:flex items-center gap-6 text-sm font-medium text-gray-600">
+          <a href="#about"     class="hover:text-ibm-blue transition">About</a>
+          <a href="#features"  class="hover:text-ibm-blue transition">Features</a>
+          <a href="#how"       class="hover:text-ibm-blue transition">How It Works</a>
+          <a href="#demo"      class="hover:text-ibm-blue transition">Demo</a>
+          <a href="#team"      class="hover:text-ibm-blue transition">Team</a>
+        </div>
+        <a href="#demo" class="bg-ibm-blue text-white text-sm font-semibold px-4 py-2 rounded-lg hover:bg-blue-700 transition active:scale-95">
+          Try Demo
+        </a>
+      </div>
+    </nav>
+
+    <!-- ===== HERO ===== -->
+    <section class="pt-32 pb-20 bg-gradient-to-br from-ibm-dark via-blue-900 to-ibm-blue text-white relative overflow-hidden">
+      <!-- Background decoration -->
+      <div class="absolute inset-0 opacity-10">
+        <div class="absolute top-10 right-10 w-72 h-72 rounded-full bg-white blur-3xl"></div>
+        <div class="absolute bottom-0 left-0 w-96 h-96 rounded-full bg-blue-400 blur-3xl"></div>
+      </div>
+
+      <div class="max-w-6xl mx-auto px-6 relative">
+        <div class="max-w-2xl">
+          <!-- Badge -->
+          <span class="inline-flex items-center gap-2 bg-white/10 border border-white/20 text-blue-200 text-xs font-medium px-3 py-1.5 rounded-full mb-6">
+            <span class="w-1.5 h-1.5 bg-green-400 rounded-full animate-pulse"></span>
+            IBM Bob · Capstone Project 2026
+          </span>
+
+          <h1 class="text-4xl md:text-5xl font-bold leading-tight mb-5">
+            Meet <span class="text-accent" style="color:#ff6b2b">Buddy</span> —<br />
+            Your AI Onboarding<br />Assistant
+          </h1>
+          <p class="text-blue-100 text-lg leading-relaxed mb-8 max-w-xl">
+            An intelligent AI Agent built with IBM Bob that helps new employees adapt faster,
+            get answers instantly, and feel at home from day one.
+          </p>
+          <div class="flex flex-wrap gap-3">
+            <a href="#demo" class="bg-accent text-white font-semibold px-6 py-3 rounded-xl hover:opacity-90 transition active:scale-95" style="background-color:#ff6b2b">
+              Try the Demo
+            </a>
+            <a href="#how" class="border border-white/30 text-white font-semibold px-6 py-3 rounded-xl hover:bg-white/10 transition active:scale-95">
+              See How It Works
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== STATS ===== -->
+    <section class="bg-ibm-blue text-white py-10">
+      <div class="max-w-6xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+        <div>
+          <div class="text-3xl font-bold">90%</div>
+          <div class="text-blue-200 text-sm mt-1">Faster onboarding time</div>
+        </div>
+        <div>
+          <div class="text-3xl font-bold">24/7</div>
+          <div class="text-blue-200 text-sm mt-1">Always available</div>
+        </div>
+        <div>
+          <div class="text-3xl font-bold">100%</div>
+          <div class="text-blue-200 text-sm mt-1">Consistent answers</div>
+        </div>
+        <div>
+          <div class="text-3xl font-bold">0</div>
+          <div class="text-blue-200 text-sm mt-1">HR interruptions needed</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== ABOUT / PROBLEM ===== -->
+    <section id="about" class="py-20 bg-white">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <!-- Problem -->
+          <div>
+            <span class="text-ibm-blue text-sm font-semibold uppercase tracking-widest">The Problem</span>
+            <h2 class="text-3xl font-bold text-ibm-dark mt-2 mb-5">Traditional onboarding is broken</h2>
+            <div class="space-y-4">
+              <div class="flex gap-3">
+                <div class="w-8 h-8 rounded-lg bg-red-50 flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <svg class="w-4 h-4 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+                </div>
+                <p class="text-gray-600 text-sm leading-relaxed">New employees must read dozens of pages of SOPs and policy documents with no guidance.</p>
+              </div>
+              <div class="flex gap-3">
+                <div class="w-8 h-8 rounded-lg bg-red-50 flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <svg class="w-4 h-4 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+                </div>
+                <p class="text-gray-600 text-sm leading-relaxed">HR teams are constantly interrupted with repetitive questions, reducing their productivity.</p>
+              </div>
+              <div class="flex gap-3">
+                <div class="w-8 h-8 rounded-lg bg-red-50 flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <svg class="w-4 h-4 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+                </div>
+                <p class="text-gray-600 text-sm leading-relaxed">Information shared verbally is inconsistent — different employees receive different answers.</p>
+              </div>
+            </div>
+          </div>
+          <!-- Solution -->
+          <div class="bg-ibm-light rounded-2xl p-8 border border-blue-100">
+            <span class="text-ibm-blue text-sm font-semibold uppercase tracking-widest">The Solution</span>
+            <h2 class="text-2xl font-bold text-ibm-dark mt-2 mb-5">Onboarding Buddy System</h2>
+            <div class="space-y-4">
+              <div class="flex gap-3">
+                <div class="w-8 h-8 rounded-lg bg-ibm-blue flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <svg class="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                </div>
+                <p class="text-gray-700 text-sm leading-relaxed">Instant, accurate answers to onboarding questions — available 24/7, no waiting.</p>
+              </div>
+              <div class="flex gap-3">
+                <div class="w-8 h-8 rounded-lg bg-ibm-blue flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <svg class="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                </div>
+                <p class="text-gray-700 text-sm leading-relaxed">Grounded in official company documents — consistent and reliable every time.</p>
+              </div>
+              <div class="flex gap-3">
+                <div class="w-8 h-8 rounded-lg bg-ibm-blue flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <svg class="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                </div>
+                <p class="text-gray-700 text-sm leading-relaxed">Frees HR from repetitive queries so they can focus on strategic work.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FEATURES ===== -->
+    <section id="features" class="py-20 bg-ibm-gray">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="text-center mb-12">
+          <span class="text-ibm-blue text-sm font-semibold uppercase tracking-widest">Features</span>
+          <h2 class="text-3xl font-bold text-ibm-dark mt-2">Everything a new hire needs</h2>
+        </div>
+        <div class="grid md:grid-cols-3 gap-6">
+          <!-- Feature cards -->
+          <div class="feature-card bg-white rounded-2xl p-6 border border-gray-100">
+            <div class="w-12 h-12 rounded-xl bg-ibm-light flex items-center justify-center mb-4">
+              <svg class="w-6 h-6 text-ibm-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"/></svg>
+            </div>
+            <h3 class="font-semibold text-ibm-dark mb-2">Instant Q&A</h3>
+            <p class="text-gray-500 text-sm leading-relaxed">Ask anything about company policies, SOPs, tools, or culture and get an accurate answer in seconds.</p>
+          </div>
+          <div class="feature-card bg-white rounded-2xl p-6 border border-gray-100">
+            <div class="w-12 h-12 rounded-xl bg-ibm-light flex items-center justify-center mb-4">
+              <svg class="w-6 h-6 text-ibm-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+            </div>
+            <h3 class="font-semibold text-ibm-dark mb-2">Document Grounding</h3>
+            <p class="text-gray-500 text-sm leading-relaxed">Answers are always based on official company documents — never hallucinated, always trustworthy.</p>
+          </div>
+          <div class="feature-card bg-white rounded-2xl p-6 border border-gray-100">
+            <div class="w-12 h-12 rounded-xl bg-ibm-light flex items-center justify-center mb-4">
+              <svg class="w-6 h-6 text-ibm-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            </div>
+            <h3 class="font-semibold text-ibm-dark mb-2">24/7 Availability</h3>
+            <p class="text-gray-500 text-sm leading-relaxed">Available at any time, any day — new hires don't need to wait for business hours to get help.</p>
+          </div>
+          <div class="feature-card bg-white rounded-2xl p-6 border border-gray-100">
+            <div class="w-12 h-12 rounded-xl bg-ibm-light flex items-center justify-center mb-4">
+              <svg class="w-6 h-6 text-ibm-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+            </div>
+            <h3 class="font-semibold text-ibm-dark mb-2">Friendly Persona</h3>
+            <p class="text-gray-500 text-sm leading-relaxed">Buddy communicates in a warm, approachable tone — making new hires feel welcomed, not overwhelmed.</p>
+          </div>
+          <div class="feature-card bg-white rounded-2xl p-6 border border-gray-100">
+            <div class="w-12 h-12 rounded-xl bg-ibm-light flex items-center justify-center mb-4">
+              <svg class="w-6 h-6 text-ibm-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
+            </div>
+            <h3 class="font-semibold text-ibm-dark mb-2">Smart Escalation</h3>
+            <p class="text-gray-500 text-sm leading-relaxed">When Buddy doesn't know the answer, it gracefully redirects to the right HR contact — no dead ends.</p>
+          </div>
+          <div class="feature-card bg-white rounded-2xl p-6 border border-gray-100">
+            <div class="w-12 h-12 rounded-xl bg-ibm-light flex items-center justify-center mb-4">
+              <svg class="w-6 h-6 text-ibm-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+            </div>
+            <h3 class="font-semibold text-ibm-dark mb-2">Powered by IBM Bob</h3>
+            <p class="text-gray-500 text-sm leading-relaxed">Built on IBM Bob's powerful AI Agent framework — enterprise-grade, reliable, and easy to maintain.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== HOW IT WORKS ===== -->
+    <section id="how" class="py-20 bg-white">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="text-center mb-12">
+          <span class="text-ibm-blue text-sm font-semibold uppercase tracking-widest">Architecture</span>
+          <h2 class="text-3xl font-bold text-ibm-dark mt-2">How It Works</h2>
+        </div>
+        <div class="grid md:grid-cols-3 gap-4 items-start">
+          <!-- Step 1 -->
+          <div class="text-center">
+            <div class="w-14 h-14 rounded-2xl bg-ibm-blue text-white font-bold text-xl flex items-center justify-center mx-auto mb-4">1</div>
+            <h3 class="font-semibold text-ibm-dark mb-2">New hire asks a question</h3>
+            <p class="text-gray-500 text-sm">Employee types a question about onboarding — anything from leave policies to tool access.</p>
+          </div>
+          <!-- Arrow -->
+          <div class="hidden md:flex items-center justify-center pt-7">
+            <svg class="w-8 h-8 text-ibm-blue opacity-40" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+          </div>
+          <!-- Step 2 -->
+          <div class="text-center">
+            <div class="w-14 h-14 rounded-2xl bg-ibm-blue text-white font-bold text-xl flex items-center justify-center mx-auto mb-4">2</div>
+            <h3 class="font-semibold text-ibm-dark mb-2">IBM Bob processes it</h3>
+            <p class="text-gray-500 text-sm">The AI Agent retrieves relevant information from the company's onboarding knowledge base.</p>
+          </div>
+        </div>
+        <!-- Row 2 -->
+        <div class="grid md:grid-cols-3 gap-4 items-start mt-8">
+          <div class="hidden md:block"></div>
+          <div class="hidden md:flex items-center justify-center pt-7">
+            <svg class="w-8 h-8 text-ibm-blue opacity-40" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+          </div>
+          <div class="text-center">
+            <div class="w-14 h-14 rounded-2xl bg-accent text-white font-bold text-xl flex items-center justify-center mx-auto mb-4" style="background-color:#ff6b2b">3</div>
+            <h3 class="font-semibold text-ibm-dark mb-2">Buddy replies instantly</h3>
+            <p class="text-gray-500 text-sm">A clear, structured, and friendly answer is returned — grounded in official documents.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== DEMO (Chat Simulation) ===== -->
+    <section id="demo" class="py-20 bg-ibm-gray">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="text-center mb-10">
+          <span class="text-ibm-blue text-sm font-semibold uppercase tracking-widest">Interactive Demo</span>
+          <h2 class="text-3xl font-bold text-ibm-dark mt-2">Try Buddy yourself</h2>
+          <p class="text-gray-500 mt-2 text-sm">Click a question below to see how Buddy responds.</p>
+        </div>
+
+        <div class="max-w-2xl mx-auto bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden">
+          <!-- Chat header -->
+          <div class="bg-ibm-blue text-white px-5 py-4 flex items-center gap-3">
+            <div class="w-9 h-9 rounded-full bg-white/20 flex items-center justify-center">
+              <svg class="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+            </div>
+            <div>
+              <div class="font-semibold text-sm">Buddy</div>
+              <div class="text-blue-200 text-xs flex items-center gap-1">
+                <span class="w-1.5 h-1.5 bg-green-400 rounded-full"></span> Online
+              </div>
+            </div>
+          </div>
+
+          <!-- Chat messages -->
+          <div id="chat-box" class="p-5 h-72 overflow-y-auto flex flex-col gap-3">
+            <!-- Initial Buddy message -->
+            <div class="flex gap-2 items-end">
+              <div class="w-7 h-7 rounded-full bg-ibm-blue flex items-center justify-center flex-shrink-0">
+                <svg class="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+              </div>
+              <div class="bg-ibm-light text-gray-800 text-sm rounded-2xl rounded-bl-sm px-4 py-3 max-w-xs leading-relaxed">
+                Hi there! 👋 Welcome to the team! I'm Buddy, your onboarding assistant. What would you like to know?
+              </div>
+            </div>
+          </div>
+
+          <!-- Quick question buttons -->
+          <div class="px-5 pb-3 flex flex-wrap gap-2">
+            <button class="quick-btn text-xs bg-ibm-light text-ibm-blue border border-blue-100 px-3 py-1.5 rounded-full hover:bg-blue-100 transition" data-q="0">
+              🗓️ Cuti tahunan?
+            </button>
+            <button class="quick-btn text-xs bg-ibm-light text-ibm-blue border border-blue-100 px-3 py-1.5 rounded-full hover:bg-blue-100 transition" data-q="1">
+              🔑 Akses sistem?
+            </button>
+            <button class="quick-btn text-xs bg-ibm-light text-ibm-blue border border-blue-100 px-3 py-1.5 rounded-full hover:bg-blue-100 transition" data-q="2">
+              👋 Hari pertama?
+            </button>
+          </div>
+
+          <!-- Input -->
+          <div class="border-t border-gray-100 px-4 py-3 flex gap-2">
+            <input id="chat-input" type="text" placeholder="Ask Buddy anything…"
+              class="flex-1 text-sm border border-gray-200 rounded-xl px-3 py-2 outline-none focus:border-ibm-blue focus:ring-2 focus:ring-blue-100 transition" />
+            <button id="chat-send" class="bg-ibm-blue text-white px-4 py-2 rounded-xl text-sm font-medium hover:bg-blue-700 transition active:scale-95">
+              Send
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== TEAM ===== -->
+    <section id="team" class="py-20 bg-white">
+      <div class="max-w-6xl mx-auto px-6 text-center">
+        <span class="text-ibm-blue text-sm font-semibold uppercase tracking-widest">Team</span>
+        <h2 class="text-3xl font-bold text-ibm-dark mt-2 mb-10">Built by</h2>
+        <div class="flex flex-wrap justify-center gap-6">
+          <div class="bg-ibm-gray rounded-2xl px-8 py-6 border border-gray-100 min-w-[160px]">
+            <div class="w-14 h-14 rounded-full bg-ibm-blue mx-auto mb-3 flex items-center justify-center text-white font-bold text-xl">
+              A
+            </div>
+            <div class="font-semibold text-ibm-dark">Your Name</div>
+            <div class="text-gray-400 text-xs mt-1">AI Engineer</div>
+          </div>
+        </div>
+        <p class="text-gray-400 text-xs mt-8">Capstone Project · IBM Skillsbuild × Hacktiv8 · 2026</p>
+      </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="bg-ibm-dark text-white py-10">
+      <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4">
+        <div class="flex items-center gap-2">
+          <div class="w-7 h-7 rounded-md bg-ibm-blue flex items-center justify-center">
+            <svg class="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+          </div>
+          <span class="font-semibold text-sm">Onboarding Buddy System</span>
+        </div>
+        <p class="text-gray-400 text-xs">© 2026 · Built with IBM Bob · Hacktiv8 Capstone Project</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
